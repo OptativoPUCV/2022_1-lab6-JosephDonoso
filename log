@@ -25,3 +25,9 @@ sudoku.c:87:7: error: variable 'valoresAux' set but not used [-Werror=unused-but
 cc1.exe: all warnings being treated as errors
 Compilation failed
 ec5f91c
+mi., 11 de may. de 2022 23:48:49: 
+ sudoku.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ tests:  2|4
+total_score: 15/70
+c44c61c
