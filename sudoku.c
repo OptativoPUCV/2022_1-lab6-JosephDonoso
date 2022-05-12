@@ -157,8 +157,21 @@ Node* DFS(Node* initial, int* cont){
   push( pila, initial );
 
   while(!is_empty(pila)){
-    printf("si funciona");
-    break;
+    Node* n = top( pila );
+    pop( pila );
+
+    if (is_final( n ))
+    {
+      return n;
+    }
+
+    List* adyacentes = get_adj_nodes( n );
+    while(!is_empty( adyacentes)){
+      push( pila, last(adyacentes) );
+      popBack ( adyacentes );
+    }
+
+    free(n);
   }
 
   return NULL;
