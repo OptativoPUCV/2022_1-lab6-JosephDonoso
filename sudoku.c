@@ -159,18 +159,13 @@ Node* DFS(Node* initial, int* cont){
   while(!is_empty(pila)){
     Node* n = top( pila );
     pop( pila );
-
-    if (is_final( n ))
-    {
-      return n;
-    }
-
+    if (is_final( n )) return n;
+    
     List* adyacentes = get_adj_nodes( n );
     while(!is_empty( adyacentes)){
       push( pila, last(adyacentes) );
       popBack ( adyacentes );
     }
-
     free(n);
   }
 
