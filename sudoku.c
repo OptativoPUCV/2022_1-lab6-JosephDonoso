@@ -55,7 +55,7 @@ int is_valid_fila(int fil, Node* n){
         valoresAux[ n->sudo[fil][i] - 1] = 1;
       }
       else{
-        printf("Aqui pasa algo %i %i",  fil,  i);
+        printf("Aqui pasa algo con filas %i %i",  fil,  i);
         return 0;
       }
     }
@@ -76,7 +76,7 @@ int is_valid_columna(int col, Node* n){
         valoresAux[ n->sudo[i][col] - 1] = 1;
       }
       else{
-        printf("Aqui pasa algo %i %i",  i,  col);
+        printf("Aqui pasa algo con columnas%i %i",  i,  col);
         return 0;
       }
     }
@@ -99,7 +99,7 @@ int is_valid_submatrix(int subM, Node* n){
         valoresAux[ n->sudo[i][j] - 1] = 1;
         }
         else{
-          printf("Aqui pasa algo %i %i",  i,  j);
+          printf("Aqui pasa algo subm%i %i",  i,  j);
           return 0;
         }
       }
