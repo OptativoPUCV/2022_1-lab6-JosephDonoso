@@ -51,6 +51,7 @@ int is_valid_fila(int fil, Node* n){
 
   for( int i = 0; i < 9; i++){
     if( n->sudo[fil][i] != 0){
+      printf("%i", n->sudo[fil][i] );
       if( valoresAux[ n->sudo[fil][i] - 1] != 1){
         valoresAux[ n->sudo[fil][i] - 1] = 1;
       }
