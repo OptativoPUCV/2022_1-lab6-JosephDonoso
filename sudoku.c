@@ -92,8 +92,8 @@ int is_valid_submatrix(int subM, Node* n){
   }
  
   for(int p = 0;p < 9; p++){
-      int i = 3*(subM / 3) + (subM / 3) ;
-      int j = 3*(subM % 3) + (subM % 3) ;
+      int i = 3*(subM / 3) + (p / 3) ;
+      int j = 3*(subM % 3) + (p % 3) ;
       if( n->sudo[i][j] != 0){
         if( valoresAux[ n->sudo[i][j] - 1] != 1){
         valoresAux[ n->sudo[i][j] - 1] = 1;
