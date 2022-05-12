@@ -112,7 +112,7 @@ int is_valid_submatrix(int subM, Node* n){
 int is_valid(Node* n){
   
   for( int i = 0; i < 9; i++){
-    if ( !is_valid_fila(i, n) || !is_valid_columna(i, n) || !is_valid_submatrix(i+1, n) ){
+    if ( !is_valid_fila(i, n) || !is_valid_columna(i, n) || !is_valid_submatrix(i, n) ){
       return 0;
     }
   }

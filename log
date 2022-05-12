@@ -66,3 +66,9 @@ ju., 12 de may. de 2022  0:05:40:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 63cb03e
+ju., 12 de may. de 2022  0:06:08: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|3
+total_score: 35/70
+a679013
