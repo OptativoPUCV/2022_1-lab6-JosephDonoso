@@ -43,8 +43,62 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int is_valid_fila(int fil, Node* n){
+  int valoresAux[9];
+  for( int i = 0; i < 10; i++){
+    valoresAux[i] = 0;
+  }
 
+  for( int i = 0; i < 9; i++){
+    if( n->sudo[fil][i] != 0){
+      if( valoresAux[ n->sudo[fil][i] - 1] != 1){
+        valoresAux[ n->sudo[fil][i] - 1] = 1;
+      }
+      else{
+        return 0;
+      }
+    }
+  }
+
+  return 1;
+}
+
+int is_valid_columna(int col, Node* n){
+  int valoresAux[9];
+  for( int i = 0; i < 10; i++){
+    valoresAux[i] = 0;
+  }
+
+  for( int i = 0; i < 9; i++){
+    if( n->sudo[i][col] != 0){
+      if( valoresAux[ n->sudo[i][col] - 1] != 1){
+        valoresAux[ n->sudo[i][col] - 1] = 1;
+      }
+      else{
+        return 0;
+      }
+    }
+  }
+
+  return 1;
+}
+
+int is_valid_submatrix(int subM, Node* n){
+  int valoresAux[9];
+  for( int i = 0; i < 10; i++){
+    valoresAux[i] = 0;
+  }
+
+  return 1;
+}
+
+int is_valid(Node* n){
+  
+  for( int i = 0; i < 9; i++){
+    if ( !is_valid_fila(i, n) || !is_valid_columna(i, n) || !is_valid_submatrix(i, n) ){
+      return 0;
+    }
+  }
     return 1;
 }
 

@@ -14,3 +14,14 @@ mi., 11 de may. de 2022 23:03:33:
  tests:  2|4
 total_score: 15/70
 0ab11c0
+mi., 11 de may. de 2022 23:45:29: 
+ sudoku.c | 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 54 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid_submatrix':
+sudoku.c:87:7: error: variable 'valoresAux' set but not used [-Werror=unused-but-set-variable]
+   int valoresAux[9];
+       ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+ec5f91c
