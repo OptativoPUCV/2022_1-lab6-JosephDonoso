@@ -156,6 +156,11 @@ Node* DFS(Node* initial, int* cont){
   Stack* pila = createStack();
   push( pila, initial );
 
+  while(!is_empty(pila)){
+    printf("si funciona");
+    break;
+  }
+
   return NULL;
 }
 
