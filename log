@@ -130,3 +130,9 @@ ju., 12 de may. de 2022  0:40:17:
  tests:  10|0
 total_score: 70/70
 3d2136f
+do., 15 de may. de 2022  1:34:59: 
+ sudoku.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  10|0
+total_score: 70/70
+52595cb

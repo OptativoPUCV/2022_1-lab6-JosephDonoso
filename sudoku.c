@@ -157,6 +157,7 @@ Node* DFS(Node* initial, int* cont){
   push( pila, initial );
 
   while(!is_empty(pila)){
+    *cont += 1;
     Node* n = top( pila );
     pop( pila );
     if (is_final( n )) return n;
