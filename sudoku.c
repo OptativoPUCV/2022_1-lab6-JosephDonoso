@@ -129,7 +129,7 @@ List* get_adj_nodes(Node* n){
             Node* nuevoEstado = copy( n );
             nuevoEstado->sudo[i][j] = k;
             if( is_valid(nuevoEstado) ){
-              pushBack( list , nuevoEstado );
+              pushFront( list , nuevoEstado );
             }
           }
           return list;
@@ -155,9 +155,9 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   Stack* pila = createStack();
   push( pila, initial );
-
+  *cont = 0;
   while(!is_empty(pila)){
-    *cont += 1;
+    
     Node* n = top( pila );
     pop( pila );
     if (is_final( n )) return n;
@@ -168,6 +168,7 @@ Node* DFS(Node* initial, int* cont){
       popBack ( adyacentes );
     }
     free(n);
+    *cont += 1;
   }
 
   return NULL;
@@ -176,7 +177,7 @@ Node* DFS(Node* initial, int* cont){
 
 
 
-int main( int argc, char *argv[] ){
+/*int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
 
@@ -186,4 +187,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}
+}*/
