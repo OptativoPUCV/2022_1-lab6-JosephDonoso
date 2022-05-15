@@ -129,7 +129,7 @@ List* get_adj_nodes(Node* n){
             Node* nuevoEstado = copy( n );
             nuevoEstado->sudo[i][j] = k;
             if( is_valid(nuevoEstado) ){
-              pushFront( list , nuevoEstado );
+              pushBack( list , nuevoEstado );
             }
           }
           return list;
@@ -157,18 +157,16 @@ Node* DFS(Node* initial, int* cont){
   push( pila, initial );
   *cont = 0;
   while(!is_empty(pila)){
-    
+    *cont += 1;
     Node* n = top( pila );
     pop( pila );
     if (is_final( n )) return n;
-    
     List* adyacentes = get_adj_nodes( n );
     while(!is_empty( adyacentes)){
       push( pila, last(adyacentes) );
       popBack ( adyacentes );
     }
     free(n);
-    *cont += 1;
   }
 
   return NULL;
